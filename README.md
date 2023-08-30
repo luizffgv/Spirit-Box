@@ -11,6 +11,7 @@
 
 - [Create](https://discord.com/developers/applications/) a Discord application
   and its respective bot.
+- Run `npm install` in this repository to download dependencies.
 - Run `npm run setup` and fill in the required information.
 - Run `npm run build` to compile the TypeScript source.
 
