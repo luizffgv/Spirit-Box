@@ -69,11 +69,11 @@ export default class Bot {
       });
 
       // Forwards commands to handlers
-      client.on("interactionCreate", async (interaction) => {
+      client.on("interactionCreate", (interaction) => {
         if (!interaction.isChatInputCommand()) return;
 
         if (interaction.commandName in Bot.#COMMAND_HANDLERS)
-          await Bot.#COMMAND_HANDLERS[interaction.commandName](interaction);
+          Bot.#COMMAND_HANDLERS[interaction.commandName](interaction);
       });
 
       await client.login(parameters.token);
